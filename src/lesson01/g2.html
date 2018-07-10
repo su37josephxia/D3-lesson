@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://gw.alipayobjects.com/as/g/datavis/assets/1.0.5/g2/3.0.0/g2.min.js"></script>
+</head>
+<body>
+<div id="c1"></div>
+<script>
+    const data = [
+        {"month":0,"tem":7,"city":"tokyo"},
+        {"month":1,"tem":6.9,"city":"tokyo"},
+        {"month":2,"tem":9.5,"city":"tokyo"},
+        {"month":3,"tem":14.5,"city":"tokyo"},
+        {"month":4,"tem":18.2,"city":"tokyo"},
+        {"month":5,"tem":21.5,"city":"tokyo"},
+        {"month":6,"tem":25.2,"city":"tokyo"},
+        {"month":7,"tem":26.5,"city":"tokyo"},
+        {"month":8,"tem":23.3,"city":"tokyo"},
+        {"month":9,"tem":18.3,"city":"tokyo"},
+        {"month":10,"tem":13.9,"city":"tokyo"},
+        {"month":11,"tem":9.6,"city":"tokyo"},
+        {"month":0,"tem":-0.2,"city":"newYork"},
+        {"month":1,"tem":0.8,"city":"newYork"},
+        {"month":2,"tem":5.7,"city":"newYork"},
+        {"month":3,"tem":11.3,"city":"newYork"},
+        {"month":4,"tem":17,"city":"newYork"},
+        {"month":5,"tem":22,"city":"newYork"},
+        {"month":6,"tem":24.8,"city":"newYork"},
+        {"month":7,"tem":24.1,"city":"newYork"},
+        {"month":8,"tem":20.1,"city":"newYork"},
+        {"month":9,"tem":14.1,"city":"newYork"},
+        {"month":10,"tem":8.6,"city":"newYork"},
+        {"month":11,"tem":2.5,"city":"newYork"},
+        {"month":0,"tem":-0.9,"city":"berlin"},
+        {"month":1,"tem":0.6,"city":"berlin"},
+        {"month":2,"tem":3.5,"city":"berlin"},
+        {"month":3,"tem":8.4,"city":"berlin"},
+        {"month":4,"tem":13.5,"city":"berlin"},
+        {"month":5,"tem":17,"city":"berlin"},
+        {"month":6,"tem":18.6,"city":"berlin"},
+        {"month":7,"tem":17.9,"city":"berlin"},
+        {"month":8,"tem":14.3,"city":"berlin"},
+        {"month":9,"tem":9,"city":"berlin"},
+        {"month":10,"tem":3.9,"city":"berlin"},
+        {"month":11,"tem":1,"city":"berlin"}
+    ]
+    // Step 1: 创建 Chart 对象
+    const chart = new G2.Chart({
+        container: 'c1', // 指定图表容器 ID
+        width: 1024, // 指定图表宽度
+        height: 768 // 指定图表高度
+    });
+    chart.source(data);
+    chart.area()
+    //geom选择  选择几何学标记
+    //    point: 将数据展示成一个个的点；
+    //    path: 将数据连接成一条线，不保证数据的顺序；
+    //    line: 一种特殊的 path (路径)，x 轴上的数据进行排序；
+    //    area: 将线图进行闭合，中间区域填充，构成区域图；
+    //    interval: 使用矩形、弧形表示数据的上下区间，可以用来生成柱状图、直方图、饼图等图表；
+    //    polygon: 用于绘制地图、treemap 等多边形的图表；
+    //    schema: 自定义图，用于自定义各种图表，可以用于展示箱型图、蜡烛图等图表；
+    //    heatmap: 用于绘制热力图；
+    //    edge: 用于两个数据之间连接边的绘制，可以用于绘制树、流程图、网络等关系图。
+    .position('month*tem')
+    // attr 图形属性映射
+    .shape('city')
+        .color('city');
+//    chart.facet('list',{fileds:['city']});
+//    .coord('rect')
+
+
+    chart.render();
+
+
+</script>
+</body>
+</html>
