@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
-    "start": "webpack-dev-server --mode development --open",
+    "webpack": "webpack-dev-server --mode development --open",
+    "start": "live-server ./src --port=8081",
     "build": "webpack --mode production"
   },
   "keywords": [],

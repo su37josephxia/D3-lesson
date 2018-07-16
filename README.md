@@ -23,7 +23,7 @@
  - Enter your local directory, and install dependencies:
 
 ``` bash
-npm install
+npm install -g live-server
 npm start
 ```
 如果不能自动打开浏览器 请浏览器访问: http://localhost:4000
