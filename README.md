@@ -10,6 +10,9 @@
  https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000
  - D3中文API手册
  https://github.com/d3/d3/wiki/API--%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C
+ - 第三视频教程
+ https://www.imooc.com/video/4743
+
  - Clone or download this repository
  - Enter your local directory, and install dependencies:
 
