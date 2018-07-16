@@ -13,7 +13,7 @@
     path {
         fill: none;
         stroke: steelblue;
-        stroke-width: 1.5px;
+        stroke-width: 5px;
     }
 
     .node circle {
@@ -34,20 +34,22 @@
 </style>
 
 <body>
+
+    <div><a href="../index.html">Go Back</a></div>
     <!-- <script src="d3.js"></script> -->
     <script src="https://cdn.bootcss.com/d3/3.5.17/d3.js"></script>
     <script>
         var width = 500
-        var height = 500
+        var height = 400
         var margin = {
             left: 50,
             top: 30,
             right: 20,
-            bottom: 20
+            bottom: 50
         }
         g_width = width - margin.left - margin.right
         g_height = height - margin.top - margin.bottom
-        
+
         //定义svg
         var svg = d3.select("body").append("svg")
             .attr("width", width)
@@ -72,7 +74,6 @@
 
         var x_axis = d3.svg.axis().scale(scale_x)
         var y_axis = d3.svg.axis().scale(scale_y).orient("left")
-
 
         var line_generator = d3.svg.line()
             .x(function (d, i) {

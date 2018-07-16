@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --mode development",
     "webpack": "webpack-dev-server --mode development --open",
-    "start": "live-server ./src --port=8081",
+    "start": "live-server --open=./src/index.html --port=8081",
     "build": "webpack --mode production"
   },
   "keywords": [],

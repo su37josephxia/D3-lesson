@@ -19,6 +19,7 @@
 
 ## Start
  - NodeJS 8.0 need
+ https://nodejs.org/en/
  - Clone or download this repository
  - Enter your local directory, and install dependencies:
 
@@ -26,7 +27,7 @@
 npm install -g live-server
 npm start
 ```
-如果不能自动打开浏览器 请浏览器访问: http://localhost:4000
+如果不能自动打开浏览器 请浏览器访问: http://localhost:8081
 
 
 
