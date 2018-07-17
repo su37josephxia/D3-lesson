@@ -18,6 +18,8 @@
 
 
 ## Start
+[详细安装](development/Doc.md)
+
  - NodeJS 8.0 need
  https://nodejs.org/en/
  - Clone or download this repository
