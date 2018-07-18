@@ -35,7 +35,9 @@
 
 <body>
 
-    <div><a href="../index.html">Go Back</a></div>
+    <div>
+        <a href="../index.html">Go Back</a>
+    </div>
     <!-- <script src="d3.js"></script> -->
     <script src="https://cdn.bootcss.com/d3/3.5.17/d3.js"></script>
     <script>
@@ -57,11 +59,7 @@
             .append("g")
             .attr("transform", "translate(40,40)")
 
-
         var data = [1, 3, 5, 6, 7, 8, 9, 0]
-
-        var scale_x = d3.scale.linear()
-            .domain([0, data.length - 1])
 
         var scale_x = d3.scale.linear()
             .domain([0, data.length - 1])
@@ -87,21 +85,13 @@
         let g = d3.select('g')
             .append('path')
             .attr('d', line_generator(data))
-
         svg
             .append("g")
             .call(x_axis)
             .attr("transform", "translate(0+" + g_height + ")")
-
         svg
             .append("g")
             .call(y_axis)
-            .append("text")
-            .text("文字标签")
-            .attr("transform", "rotate(-90)")
-            .attr("text-anchor", "end")
-            .attr("dy", "1em")
     </script>
 </body>
-
 </html>
